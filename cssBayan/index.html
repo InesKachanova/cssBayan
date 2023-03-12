@@ -67,7 +67,7 @@
         display: block;
         margin: 0 auto;
         padding: 50px 0;
-        width: 50%;
+        max-height: 60vh;
       }
       input {
         display: none;
@@ -95,7 +95,21 @@
           display: inline;
         }
         .item-content img {
-          width: 70%;
+          max-height: 70vh;
+        }
+      }
+
+      @media (max-width: 320px) {
+        h1 {
+          font-size: 20pt;
+          padding: 20px 0;
+        }
+        .item {
+          font-size: 10pt;
+        }
+        .item-content img {
+          max-height: 80vh;
+          padding: 20px 0;
         }
       }
     </style>
