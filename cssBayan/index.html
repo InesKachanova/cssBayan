@@ -17,7 +17,7 @@
       h1 {
         margin: 0;
         font-size: 40pt;
-        padding: 50px 0;
+        padding: 3rem 0;
       }
 
       .items {
@@ -47,7 +47,7 @@
         padding: 2%;
         font-weight: bold;
         flex-direction: column;
-        border-top: solid 1px #536376;
+        border-top: solid 0.0625rem #536376;
       }
 
       .item-label .item-title {
@@ -68,6 +68,11 @@
         display: inline;
       }
 
+      .items:hover .item, 
+      input:checked ~ .item-label > .item-title {
+        color: #23282e;
+      }
+
       .item-content {
         width: 100%;
         max-height: 0;
@@ -77,7 +82,7 @@
       .item-content img {
         display: block;
         margin: 0 auto;
-        padding: 50px 0;
+        padding: 3rem 0;
         max-height: 60vh;
       }
 
@@ -117,7 +122,7 @@
       @media (max-width: 320px) {
         h1 {
           font-size: 20pt;
-          padding: 20px 0;
+          padding: 1.25rem 0;
         }
 
         .item {
@@ -126,7 +131,7 @@
 
         .item-content img {
           max-height: 80vh;
-          padding: 20px 0;
+          padding: 1.25rem 0;
         }
       }
     </style>
