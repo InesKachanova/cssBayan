@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bayan</title>
+
+    <style>
+      body {
+        margin: 0;
+        background-color: azure;
+        padding: 0 10%;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 3.5rem;
+        padding: 3rem 0;
+      }
+
+      .items {
+        overflow: hidden;
+      }
+
+      .item {
+        width: 100%;
+        font-size: 2.5rem;
+        color: rgb(83, 134, 222);
+        overflow: hidden;
+      }
+
+      .item * {
+        cursor: pointer;
+      }
+
+      .item-close {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 0.75em;
+      }
+
+      .item-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 2%;
+        font-weight: bold;
+        flex-direction: column;
+        border-top: solid 0.0625rem #536376;
+      }
+
+      .item-label .item-title {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .item-label .item-title::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all 0.75s;
+        display: none;
+      }
+
+      input:checked ~ .item-label > .item-title {
+        color: #23282e;
+      }
+
+      .item-content {
+        width: 100%;
+        max-height: 0;
+        transition: all 0.75s;
+      }
+
+      .item-content img {
+        display: block;
+        margin: 0 auto;
+        padding: 3rem 0;
+        max-height: 60vh;
+        max-width: 100%;
+      }
+
+      input {
+        display: none;
+      }
+
+      input:checked ~ .item-label .item-content {
+        max-height: 100vh;
+        
+      }
+
+      input:checked ~ .item-label > .item-title::after {
+        transform: rotate(90deg);
+      }
+
+      /* media */
+
+      @media (hover: hover) {
+        .items:hover .item-title::after {
+        display: inline;
+      }
+      .items:hover .item {
+        color: #23282e;
+      }
+      .item:hover .item-content {
+        max-height: 100vh;
+        max-width: 100%;
+      }
+      .item:hover .item-title::after {
+        transform: rotate(90deg);
+      }
+
+      }
+      @media (max-width: 820px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .item {
+          font-size: 1.75rem;
+        }
+
+        .item-label .item-title::after {
+          display: inline;
+        }
+
+        .item-content img {
+          max-height: 70vh;
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 320px) {
+        h1 {
+          font-size: 1.75rem;
+          padding: 1.25rem 0;
+        }
+
+        .item {
+          font-size: 0.75rem;
+        }
+
+        .item-content img {
+          max-height: 80vh;
+          max-width: 100%;
+          padding: 1.25rem 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Bayan</h1>
+    <div class="items">
+      <div class="item">
+        <input type="radio" id="bayan1" name="bayan" checked />
+        <label class="item-label" for="bayan1">
+          <div class="item-title">Meme 1</div>
+          <div class="item-content">
+            <img
+              src="https://saltmag.ru/media/articles/inner/2020/6373/52.jpg"
+              alt=""
+            >
+          </div>
+        </label>
+      </div>
+
+      <div class="item">
+        <input type="radio" id="bayan2" name="bayan" />
+        <label class="item-label" for="bayan2">
+          <div class="item-title">Meme 2</div>
+          <div class="item-content">
+            <img
+              src="https://saltmag.ru/media/articles/inner/2020/6373/41.jpg"
+              alt=""
+            >
+          </div>
+        </label>
+      </div>
+
+      <div class="item">
+        <input type="radio" id="bayan3" name="bayan" />
+        <label class="item-label" for="bayan3">
+          <div class="item-title">Meme 3</div>
+          <div class="item-content">
+            <img
+              src="https://saltmag.ru/media/articles/inner/2020/6373/28.jpg"
+              alt=""
+            >
+          </div>
+        </label>
+      </div>
+
+      <div class="item">
+        <input type="radio" id="bayan4" name="bayan" />
+        <label class="item-label" for="bayan4">
+          <div class="item-title">Meme 4</div>
+          <div class="item-content">
+            <img
+              src="https://saltmag.ru/media/articles/inner/2020/6373/26.jpg"
+              alt=""
+            >
+          </div>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
